@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type ="text/css" href="style.css">
+  <title>Question</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="question">Hey, would you like to see one of these days?</h1>
+    <div class="img-container">
+      <img src="https://cdn.fullyst.com/stickers/4429af1d-cd33-5290-9569-efa32b32f215/full/AgAD2wcAAm2XuFE.webp" alt="sticker" class="catguy">
+    </div>
+    <div class="btn-container">
+      <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+      <button class="btn" id = "noButton" onmouseover="moveButton()">NO</button>
+      <script>
+        function nextPage() {
+          window.location.href = "yes.html";}
+        function moveButton() {
+          var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+          var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+          document.getElementById('noButton').style.left = `${x}px`;
+          document.getElementById('noButton').style.top = `${y}px`;}
+        </script>
+    </div>
+  </div>
+</body>
+</html>
